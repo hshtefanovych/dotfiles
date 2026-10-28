@@ -95,10 +95,12 @@ alias l='ls -CF'
 stateof() {
     docker inspect -f '{{json .State}}' $1 | jq
 }
+export SUDO_EDITOR=vim
 
 alias compose='docker compose'
 alias container='docker container'
 alias image='docker image'
+alias gProj='cd /home/heorhii/IdeaProjects/testcase-transformer/'
 alias dps="docker compose ps --format 'table {{.Name}}\t{{.Status}}\t{{.Image}}'"
 alias dstats="compose stats --no-stream --format 'table {{.ID}}\t{{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.PIDs}}'"
 
